@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<meta charset="utf8"></meta>
+<title>CTE - Cadastro de Usuário</title>
+</h:head>
+<body> 
+    <div class="box">
+        <h2 class="logo text-center"><img src="../img/logomarca.png" width="380px" height="80px"></img></h2>
+        <br></br>
+    </div>
+    <div class="container">
+        <div class="col-12">
+            <h:form id="form">
+                <div class="form-row" style="margin:auto">
+                    <input type='hidden' name='id' value=""></input>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault01">Login: </label>
+                        <!--<input type="text" class="form-control" name="login" id="validationDefault01" required></input> -->
+                        <h:inputText class="form-control" value="#{usuario.login}" />
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault02">Senha:</label>
+                        <!--  <input type="password" class="form-control" name="senha" id="senha01"> -->
+                        <h:inputText class="form-control" value="#{usuario.senha}"/>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault03">Nome: </label>
+                        <br/>
+                        <!-- <input type="text" class="form-control" name="nomeUsuario" id="validationDefault03" required> -->
+                        <h:inputText class="form-control" value="#{usuario.nomeUsuario}"/>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault04">Sobrenome: </label>
+                        <br/>
+                        <!-- <input type="text" class="form-control" name="sobrenome" id="validationDefault04" required> -->
+                        <h:inputText class="form-control" value="#{usuario.sobrenome}"/>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault05">CPF: </label>
+                        <br/>
+                        <!-- <input type="text" class="form-control" name="cpf" id="validationDefault05" required> -->
+                        <h:inputText class="form-control" value="#{usuario.cpf}"/>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault06">CEP: </label>
+                        <br/>
+                        <!-- <input type="text" class="form-control" name="cep" id="validationDefault06" required> -->
+                        <h:inputText class="form-control" value="#{usuario.cep}"/>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault07">Endereco: </label>
+                        <br/>
+                        <!-- <input type="text" class="form-control" name="endereco" id="validationDefault07" required> -->
+                        <h:inputText class="form-control" value="#{usuario.endereco}"/>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault08">Estado:</label>
+                        <select class="custom-select" id="validationDefault08" value="#{usuario.uf}">
+                            <option value="Acre">AC</option>
+                            <option value="Alagoas">AL</option>
+                            <option value="Amapá">AP</option>
+                            <option value="Amazonas">AM</option>
+                            <option value="Bahia">BA</option>
+                            <option value="Ceará">CE</option>
+                            <option value="Distrito Federal">DF</option>
+                            <option value="Espírito Santo">ES</option>
+                            <option value="Goiás">GO</option>
+                            <option value="Maranhão">MA</option>
+                            <option value="Mato Grosso">MT</option>
+                            <option value="Mato Grosso do Sul">MS</option>
+                            <option value="Minas Gerais">MG</option>
+                            <option value="Pará">PA</option>
+                            <option value="Paraíba">PB</option>
+                            <option value="Paraná">PR</option>
+                            <option value="Pernambuco">PE</option>
+                            <option value="Piauí">PI</option>
+                            <option value="Rio de Janeiro">RJ</option>
+                            <option value="Rio Grande do Sul">RS</option>
+                            <option value="Rio Grande do Norte">RN</option>
+                            <option value="Rondônia">RO</option>
+                            <option value="Roraima">RR</option>
+                            <option value="Santa Catarina">SC</option>
+                            <option value="São Paulo">SP</option>
+                            <option value="Sergipe">SE</option>
+                            <option value="Tocantins">TO</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 ">
+                        <label for="validationDefault09">Cadastrar </label>
+                        <br/>                        
+						<h:commandButton type="submit" class="btn btn-primary" value="Confirmar Cadastro" action="#{usuarioController.salvar(usuario)}"></h:commandButton>						            						
+                    </div>
+                </div>
+             </h:form>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+</html>

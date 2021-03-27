@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+			
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
+
+   		<title>CTE AVIAÇÃO</title>
+	
+		<style>	 
+			#box-login {background:#FFF;padding:15px;}
+			
+			a{color:#1B3D58;}
+			a:hover,a:active,a:focus{color:#222;}
+			
+			.logo{padding:50px;}.logo img{max-width:250px;}
+			.form-control{border:none;border-bottom:1px solid #222;border-radius:0;}
+			.btn{border-radius:20px;padding:5px 20px;border:none;}
+			.btn-primary{background:#1B3D58;}
+			.link-btn:hover{cursor: pointer; text-decoration: none;}
+		</style>
+</h:head> 
+<body> 
+		<div id="box-login" class="container">
+			
+			<!-- Logo -->
+			<div class="row">
+				<div class="offset-md-4 col-md-4 offset-md-4">
+					<h2 class="logo text-center"><img src="img/logomarca.png" width = "108%"></img></h2>
+				</div>
+			</div>
+			<!-- Fim Logo -->
+
+			<!-- Formulário -->
+			<div class="row">
+				<div class="offset-md-4 col-md-4 offset-md-4">
+					<h:form id="form">
+						<div class="form-group">
+							<label>Login:</label>
+							<h:inputText value="#{usuario.login}" class="col-md-12 form-control"/>
+						</div>
+						<div class="form-group">	
+							<label>Senha:</label>
+							<h:inputText value="#{usuario.senha}" class="col-md-12 form-control"/>
+						</div>
+						<div class="form-group">
+							<div class="float-right">
+								<h:commandButton type="submit" class="btn btn-primary" value="Entrar" action="#{usuarioController.logar(usuario)}"></h:commandButton>
+							</div>
+							<input type="checkbox" name="senha"/> Lembrar senha
+						</div>
+					</h:form>
+				</div>
+			</div>
+			<!-- Fim Formulário -->
+
+			<!-- Esqueceu Senha e Cadastrar -->
+			<div class="row mt-3">
+				<div class="offset-md-4 col-md-4 offset-md-4">
+					<p class="text-center">
+						<a href="util/utilidade.xhtml">Esqueceu a senha?</a>&nbsp;|&nbsp;
+						<a href="usuario/novoCadastro.xhtml" class = "link-btn">Deseja se cadastrar ?</a>
+					</p>
+				</div>
+			</div>
+			<!-- Fim Esqueceu Senha e Cadastrar -->
+		</div>
+		<!-- Fim Container Principal -->
+  
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body> 
+</html>
